@@ -1,0 +1,22 @@
+.fill{
+    font-size: 80px;
+    margin: 50px auto;
+    width: fit-content;
+    font-weight: bold;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 3px #333;
+    position: relative;
+}
+.fill::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-text-fill-color: #ff8333;
+    width: 0%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.fill:hover::before{
+    width: 100%;
+}
