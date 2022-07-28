@@ -1,0 +1,50 @@
+.form{
+    max-width: 600px;
+    background: #eee;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+}
+.form .input{
+    border: none;
+    padding: 10px;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+.btn{
+    border-radius: 5px;
+    outline: none;
+    border: 5px solid red;
+    background: red;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 900;
+    padding: 5px;
+    transition: 0.5s;
+}
+.btn:hover{
+    cursor: pointer;
+    border-color: rgb(254, 254, 255);
+
+}
+.tasks{
+    max-width: 600px;
+    background: #eee;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+.tasks .dad{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.tasks .title{
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+}
