@@ -1,0 +1,63 @@
+.box{
+    width: 800px;
+    height: 400px;
+    background: #eee;
+    margin: 100px auto;
+    position: relative;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    background: white;
+    width: 5px;
+    height: 100%;
+    top: 0%;
+    left: 50%;
+}
+.box::after{
+    content: '';
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: 5px;
+    top: 50%;
+    left: 0%;
+}
+
+.box .item{
+    width: 300px;
+    height: 150px;
+    background: red;
+}
+
+/* method number 1 */
+/*
+ .box .item{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -75px 0 0 -150px;
+}
+ */
+
+/* method number 2 */
+/* 
+.box .item{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+} 
+*/
+
+/* method number 3 */
+.box{
+    /* you can chose between flex and grid */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box .item{
+    z-index: 1;
+}
