@@ -1,0 +1,39 @@
+body{
+    background: #333;
+}
+.link{
+    display: flex;
+    border: 3px solid #8bc34a;
+    color: #8bc34a;
+    font-size: 1.2em;
+    /* padding: 15px; */
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 40px;
+    margin:  100px auto;
+    text-align: center;
+    overflow: hidden;
+
+    position: relative;
+}
+.link::before{
+    content: attr(data-text);
+    width: 180px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-100%,-50%);
+    transition: 0.3s;
+}
+.link:hover::before{
+    transform: translate(-0%,-50%);
+}
+.link span{
+    transition: 0.3s;
+    position: absolute;
+}
+.link:hover span{
+    transform: translateX(150%);
+}
