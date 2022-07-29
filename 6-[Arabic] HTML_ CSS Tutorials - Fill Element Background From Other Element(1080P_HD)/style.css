@@ -1,0 +1,43 @@
+.card{
+    width: 250px;
+    padding: 20px;
+    margin: 50px auto;
+    box-shadow: 1px 1px 3px 0px #868686;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card .number{
+    font-size: 25px;
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #828482;
+    margin: auto;
+    line-height: 50px;
+    color: white;
+    transition: 0.6s;
+}
+
+.card:hover .number{
+    box-shadow: 0 0 0 300px #828482;
+    border: solid 4px white;
+    /* color: #828482;
+    background: white; */
+}
+
+h2{
+    text-transform: capitalize;
+    transition: 0.6s;
+}
+
+p{
+    line-height: 1.5;
+    transition: 0.6s;
+}
+
+.card:hover h2,
+.card:hover p{
+    color: white;
+}
