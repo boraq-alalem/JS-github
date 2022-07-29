@@ -1,0 +1,19 @@
+body{
+    height: 5000px;
+}
+
+.up{
+    position: fixed;
+    bottom: 15px;
+    right: -60px;
+    background: #848448;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    transition: 0.6s;
+    cursor: pointer;
+}
+.up.show{
+    right: 15px;
+}
