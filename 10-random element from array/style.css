@@ -1,0 +1,14 @@
+.btn{
+    background: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: solid #262662 2px;
+    color: #262662;
+    cursor: pointer;
+}
+.label{
+    padding: 20px;
+    background: #000;
+    display: block;
+    color: white;
+}
