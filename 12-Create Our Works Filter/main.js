@@ -26,6 +26,8 @@ item.forEach(ele => {
 
 // this is my end code alalem. -----------------------------------------------------
 
+// this is start Elzero code -----------------------------------------------------
+
 cat.forEach(ele => {
     ele.addEventListener('click',activeClass);
     ele.addEventListener('click',currentItem);
@@ -46,3 +48,5 @@ function currentItem(){
         ele.style.display = 'grid';
     })
 }
+
+// this is end Elzero code -----------------------------------------------------
