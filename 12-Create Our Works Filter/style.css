@@ -1,0 +1,55 @@
+* {
+    list-style-type: none;
+    padding: 0%;
+    margin: 0%;
+}
+
+.container {
+    margin: 20px auto;
+    display: grid;
+    place-items: center;
+}
+
+.container .tabs {
+    display: flex;
+}
+
+.container .tabs li {
+    padding: 5px;
+    background: #eee;
+    text-transform: capitalize;
+    width: 110px;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.container .tabs li.active,
+.container .tabs li:hover{
+    background: rgb(203, 3, 3);
+    color: white;
+}
+
+.container .content {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 5px;
+    padding: 10px;
+}
+
+.container .content div {
+    color: white;
+    font-size: 20px;
+    width: 135px;
+    height: 135px;
+    background: #eee;
+    display: grid;
+    place-items: center;
+    text-transform: capitalize;
+    transition:0.5s;
+}
+
+
+.container .content div.show{
+    display: grid;
+
+}
