@@ -1,4 +1,6 @@
 // Array Of Words
+
+// disuble some word fir test, and you can return this word
 const words = [
   // "Hello",
   // "Programming",
