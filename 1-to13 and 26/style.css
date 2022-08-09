@@ -1,0 +1,551 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.one {
+    height: 100vh;
+    background: #eee;
+    display: grid;
+    place-items: center;
+}
+
+.two {
+    height: 100vh;
+    background: #333;
+    display: grid;
+    place-items: center;
+}
+
+.three {
+    height: 100vh;
+    background: #262838;
+    display: grid;
+    place-items: center;
+}
+
+.part1 .dad {
+    width: 800px;
+    height: 400px;
+    background: #262838;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.part1 .dad::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #eee;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.part1 .dad::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background: #eee;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.part1 .dad .child {
+    width: 300px;
+    height: 150px;
+    background: #eee;
+}
+
+.part2 .info {
+    color: #03b530;
+    text-transform: capitalize;
+    border: 3px solid #03b530;
+    padding: 10px 25px;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    overflow: hidden;
+}
+
+.part2 .info::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: -120px;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+}
+
+.part2 .info:hover::before {
+    transform: translate(120px, -50%);
+}
+
+.part2 .info span {
+    text-transform: capitalize;
+    width: 100%;
+    transition: 0.5s;
+    content: '';
+    position: absolute;
+    left: 0;
+    transform: translateX(0px);
+
+}
+
+.part2 .info:hover span {
+    transform: translateX(240px);
+}
+
+.part3 .info {
+    color: white;
+    text-transform: capitalize;
+    position: relative;
+    font-size: 65px;
+    -webkit-text-fill-color: #262838;
+    -webkit-text-stroke: 1px white;
+    font-weight: bold;
+}
+
+.part3 .info::before {
+    content: attr(data-text);
+    position: absolute;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 1px #03b530;
+    width: 0%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.part3 .info:hover::before {
+    width: 100%;
+}
+
+.part4 .btn {
+    position: relative;
+    background: #262838;
+    color: white;
+    padding: 10px 35px;
+    border-radius: 5px;
+    font-size: 45px;
+    text-transform: capitalize;
+    overflow: hidden;
+    transition: 0.7s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.part4 .btn span {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    font-size: 18px;
+    opacity: 0;
+    transition: 0.7s;
+    border-radius: 5px;
+}
+
+.part4 .btn span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-color: #333 transparent transparent;
+    border-width: 10px;
+    border-style: solid;
+}
+
+.part4 .btn:hover {
+    overflow: visible;
+}
+
+.part4 .btn:hover span {
+    opacity: 1;
+}
+
+.part5>div {
+    color: #333;
+    background: #eee;
+    width: 500px;
+    padding: 30px;
+    text-align: center;
+
+}
+
+.part5 .title {
+    padding: 10px;
+    background: rgb(120, 13, 13);
+    color: white;
+    width: calc(100% + 100px);
+    margin-bottom: 20px;
+    margin-left: -60px;
+    position: relative;
+    text-transform: capitalize;
+    font-size: 25px;
+}
+
+.part5 .title::before {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 15px;
+    transform: translate(-50%, 0%);
+    border-color: #440202 #440202 transparent transparent;
+    border-width: 15px;
+    border-style: solid;
+}
+
+.part5 .title::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    right: -15px;
+    transform: translate(-50%, 0%);
+    border-color: #440202 transparent transparent #440202;
+    border-width: 15px;
+    border-style: solid;
+}
+
+.part5 .content {
+    line-height: 1.5;
+    font-size: 1.2em;
+}
+
+.part6>div {
+    width: 250px;
+    box-shadow: 0px 0px 5px 1px white;
+    padding: 20px;
+    display: grid;
+    place-items: center;
+    gap: 20px;
+    text-align: center;
+    color: white;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.part6 .number {
+    font-size: 30px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    border: solid 3px;
+    font-weight: bold;
+    transition: 1s;
+}
+
+.part6>div:hover .number {
+    box-shadow: 0 0 30px 350px white,
+        0 0 30px 350px white inset;
+
+}
+
+.part6>div:hover {
+    color: #262838;
+}
+
+.part6 .title {
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.part6 .content {
+    line-height: 1.5;
+    font-size: 1.15em;
+}
+
+.part7 form {
+    background: #262838;
+    padding: 30px;
+    width: 400px;
+    color: white;
+    text-transform: capitalize;
+    font-size: 1.1em;
+    border-radius: 10px;
+}
+
+.part7 form>div {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    transition: 0.1s;
+}
+
+.part7 form>div:hover {
+    background: #333;
+    box-shadow: 0px 0px 2px 1px white;
+}
+
+.part7 form>div:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.part7 form>div input {
+    -webkit-appearance: none;
+    appearance: none;
+    /* margin-right: 30px; */
+
+}
+
+.part7 form>div label {
+    position: relative;
+    padding-left: 5px;
+}
+
+.part7 form>div label::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border: solid 2px #eee
+}
+
+.part7 form>div input:not(:checked):hover+label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background: #eee;
+    opacity: 0.5;
+}
+
+.part7 form>div input:checked+label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background: #eee;
+    opacity: 1;
+}
+
+.part8 button {
+    padding: 10px;
+    position: fixed;
+    bottom: 20px;
+    right: -80px;
+    background: green;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.part8 button.show {
+    right: 30px;
+}
+
+.part9>div {
+    width: 500px;
+    background: #262838;
+    padding: 40px;
+}
+
+.part9>div .tabs {
+    display: flex;
+    gap: 2px;
+    background: #333;
+    width: fit-content;
+    padding: 0px 2px;
+
+}
+
+.part9>div .tabs li {
+    padding: 10px 20px;
+    background: #eee;
+    text-transform: capitalize;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.part9>div .tabs li.active,
+.part9>div .tabs li:hover {
+    background: #262626;
+    color: white;
+}
+
+.part9>div .content div {
+    color: white;
+    padding: 15px;
+    background: #262626;
+    font-size: 1.1em;
+    line-height: 1.4;
+    transition: 0.5s;
+}
+
+.part9>div .content div:not(:first-child) {
+    display: none;
+}
+
+.part10>div {
+    width: 400px;
+    background: #262838;
+    padding: 30px 0;
+    text-align: center;
+    display: grid;
+    gap: 20px;
+    box-shadow: 2px 1px 10px 0px #08090c;
+}
+
+.part10>div .btn10 {
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #8bc;
+    border: none;
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.part10>div .btn10:hover {
+    background: #3c6a79;
+    color: white;
+}
+
+.part10>div .lbl10 {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    display: block;
+    background: #eee;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    background: #3c6a79;
+    color: white;
+}
+
+.part11>div {
+    width: 400px;
+    background: #eee;
+    padding: 30px 0;
+    text-align: center;
+    display: grid;
+    gap: 20px;
+    box-shadow: 03px 02px 5px 0px #3c6a79;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.part11>div .btn11 {
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #8bc;
+    border: none;
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.part11>div .btn11:hover {
+    background: #3c6a79;
+    color: white;
+}
+
+.part11>div .lbl11 {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    display: block;
+    background: #eee;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 20px;
+    background: #3c6a79;
+    color: white;
+    text-transform: uppercase;
+}
+
+.part12>div {
+    background: #333;
+    box-shadow: 3px 2px 6px 0px rgb(10, 10, 10);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.part12>div .tabs {
+    display: flex;
+    gap: 5px;
+    margin: auto;
+    width: fit-content;
+}
+
+.part12>div .tabs li {
+    background: #262838;
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+    width: 100px;
+    text-align: center;
+    padding: 5px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    background: #333;
+    box-shadow: 3px 2px 6px 0px rgb(10, 10, 10);
+    border-radius: 5px;
+    user-select: none;
+}
+
+.part12>div .tabs li.active,
+.part12>div .tabs li:hover {
+    color: #262838;
+    background: #eee;
+}
+
+.part12>div .content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin: 10px;
+    min-height: 270px;
+}
+
+.part12>div .content>div {
+    width: 130px;
+    height: 130px;
+    display: grid;
+    place-items: center;
+    transition: 1s;
+    opacity: 1;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 3px 2px 6px 02px #00000064;
+}
+.part12 >div .content >div.hidden{
+    opacity: 0;
+    display: none;
+}
