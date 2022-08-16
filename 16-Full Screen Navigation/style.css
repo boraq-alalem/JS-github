@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+body{overflow: hidden;}
+.open {
+    font-size: 35px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    box-shadow: 2px 3px 6px 0px #333,
+        -2px -3px 6px 0px #333 inset;
+    transform: rotate(-60deg);
+    margin: 10px;
+    background: #266985;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.open:hover{
+    background: #777;
+    color: #333;
+    box-shadow: 2px 3px 6px 0px #777,
+        -2px -3px 6px 0px #777;
+}
+.toggler{
+    transform: translate(100%,-100%);
+    transition: 0.5s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.toggler.show{
+    transform: translate(0%,0%);
+}
+.toggler ul{
+    background: #467391;
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+}
+.toggler div {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: fit-content;
+    font-size: 35px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    box-shadow: 2px 3px 6px 0px #333,
+        -2px -3px 6px 0px #333 inset;
+    transform: rotate(60deg);
+    cursor: pointer;
+    transition: 0.5s;
+    background: white;
+    /* color: white; */
+}
+.toggler div:hover{
+    color: white;
+    background: #000;
+}
+.toggler li{
+    /* background: #000; */
+    font-size: 25px;
+    transition: 0.5s;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+.toggler li:hover{
+    background: rgba(0, 0, 0, 0.29);
+}
