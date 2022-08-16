@@ -1,0 +1,21 @@
+p {
+    line-height: 2;
+    font-size: 30px;
+}
+
+::-webkit-scrollbar {
+    width: 30px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(83, 81, 81);
+    box-shadow: 2px 3px 6px 0 #336699 inset;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    box-shadow: 2px 3px 6px 0 black,
+    -2px -3px 6px 0 black;
+    border-radius: 15px;
+    cursor: pointer;
+}
