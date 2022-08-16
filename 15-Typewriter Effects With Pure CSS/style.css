@@ -1,0 +1,35 @@
+body {
+    background: #266985;
+}
+
+p {
+    font-size: 30px;
+    margin: 30px auto;
+    width: 370px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: solid 2px #0bff2cda;
+    box-shadow: 2px 3px 6px 0px black inset;
+    animation: typewriter 5s 1s steps(28), blink 0.5s infinite;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 370px;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: #0bff2cda;
+    }
+
+    to {
+        border-color: transparent;
+
+    }
+}
