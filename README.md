@@ -1,2 +1,2 @@
 # JS-github
-this folder enclouds some of JS ex 
+this folder enclouds some front end ex 
