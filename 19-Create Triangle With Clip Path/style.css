@@ -1,0 +1,44 @@
+.dad {
+    margin: 50px auto;
+    background: #eee;
+    display: grid;
+    place-items: center;
+    height: 400px;
+    width: 400px;
+}
+
+.child {
+    line-height: 2;
+    font-size: 20px;
+    color: white;
+    background: red;
+    width: 350px;
+    height: 350px;
+    clip-path: circle(50% at 50% 50%);
+    z-index: 10;
+}
+
+.child-2 {
+    line-height: 2;
+    font-size: 23px;
+    color: yellow;
+    font-weight: bold;
+    background: red;
+    width: 350px;
+    height: 350px;
+    clip-path: polygon(0 0, 100% 0% ,0% 100%);
+    z-index: 10;
+}
+
+.child-3 {
+    line-height: 2;
+    font-size: 23px;
+    font-weight: bold;
+    color: red;
+    position: absolute;
+    background: yellow;
+    width: 350px;
+    height: 350px;
+    clip-path: polygon(100% 0, 100% 100% ,0% 100%);
+    z-index: 10;
+}
