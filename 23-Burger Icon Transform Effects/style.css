@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.burgerDad {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.burger {
+    height: 28px;
+    width: 35px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    border: none;
+}
+
+.burger:hover{
+    border: solid 3px red;
+    border-radius: 50%;
+    
+}
+
+.burger span {
+    height: 4px;
+    width: 100%;
+    display: block;
+    background: #000;
+    position: absolute;
+    transition: 0.3s ease;
+}
+
+.burger span:first-child {
+    top: 0px;
+}
+
+.burger span:nth-child(2) {
+    top: 8px;
+}
+
+.burger span:last-child {
+    top: 16px;
+}
+
+.burger:hover span{
+    top: 12px;
+    background: red;
+}
+
+.burger:hover span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger:hover span:first-child {
+    transform: rotate(45deg);
+}
+
+.burger:hover span:last-child {
+    transform: rotate(-45deg);
+}
