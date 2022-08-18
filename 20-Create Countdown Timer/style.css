@@ -1,0 +1,46 @@
+div {
+    display: flex;
+    gap: 10px;
+    width: fit-content;
+    margin: 50px auto;
+    padding: 30px;
+    background: #262626;
+    border-radius: 20px 0px 20px 0px;
+}
+
+div span {
+    display: block;
+    background: #262626;
+    box-shadow: 2px 3px 6px 0px #020101,
+        2px -3px 6px 0px #020101;
+
+    padding-top: 15px;
+    width: 100px;
+    height: 100px;
+    color: white;
+    font-size: 23px;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+    font-family: cursive;
+}
+
+div span::before {
+    content: attr(data-time);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background: #333; */
+    box-shadow: 2px 3px 12px 0px rgb(13, 13, 13) inset,
+        2px -3px 6px 0px rgb(13, 13, 13) inset;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2px 5px;
+    /* border-radius: 20px 0px 20px 0px; */
+    /* border-radius: 10px; */
+    border: solid 1px;
+    border-left: none;
+    border-right: none;
+
+}
