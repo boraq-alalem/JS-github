@@ -1,0 +1,69 @@
+body>div {
+    height: 100vh;
+    border-bottom: 20px solid #333;
+    box-shadow: 2px 3px 6px 0px #333;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.three {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: #eee;
+}
+
+.three .progresDad {
+    width: 700px;
+    background: #eee;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 6px 0px #333 inset,
+        -2px -3px 6px 0px #333 inset,
+        2px 2px 4px 0px #333,
+        -2px -2px 4px 0px #333;
+}
+
+.three .progresDad .progres {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 5px;
+    margin: 5px;
+    align-items: center;
+    text-align: center;
+    box-shadow: 2px 3px 6px 0px #333 inset;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.three .progresDad .progres label {
+    box-shadow: 2px 3px 6px 0px #333 inset;
+    font-size: 25px;
+    padding: 5px 10px;
+    border-radius: 10px;
+
+}
+
+.three .progresDad .progres div {
+    box-shadow: 2px 3px 6px 0px #333 inset,
+        -2px -3px 6px 0px #333 inset;
+    height: 25px;
+    border-radius: 0px 15px 15px 0px;
+    position: relative;
+}
+
+.three .progresDad .progres div span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    height: 70%;
+    width: 0;
+    background: rgb(0, 0, 0, 50%);
+    border-radius: 0px 15px 15px 0px;
+    transition: 1s;
+}
