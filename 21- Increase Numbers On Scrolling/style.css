@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.one {
+    background: #333;
+    height: 100vh;
+}
+
+.tow {
+    background: rgb(108, 100, 100);
+    height: 100vh;
+}
+
+.three {
+    background: #444;
+    height: 100vh;
+    color: white;
+    font-size: 25px;
+    display: grid;
+    place-items: center;
+}
+
+.three ul {
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+    grid-template-columns: repeat(3, 150px);
+    background: #333;
+    width: fit-content;
+    padding: 30px 50px;
+    border: solid 2px;
+    border-top: none;
+    border-bottom: none;
+    text-align: center;
+    box-shadow: 2px 3px 6px 0px rgb(18, 18, 18) ,
+        -2px -3px 6px 0px rgb(18, 18, 18) ;
+        font-family: monospace;
+}
+
+.three ul li {
+    padding: 20px 0px;
+    box-shadow: 2px 3px 6px 0px rgb(18, 18, 18) inset,
+        -2px -3px 6px 0px rgb(18, 18, 18) inset;
+    border: solid 1px;
+    border-left: none;
+    border-right: none;
+    height: 31px;
+}
+
+.four {
+    background: #584039;
+    height: 100vh;
+}
