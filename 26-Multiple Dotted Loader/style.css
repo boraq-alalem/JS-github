@@ -1,0 +1,52 @@
+body {
+    background: #262838;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.loading {
+    width: 100px;
+    height: 100px;
+    border-color: #8bc34a;
+    border-width: 4px;
+    border-style: solid dotted dotted solid;
+    border-radius: 50%;
+    animation: rotate-right 3s linear infinite;
+    position: relative;
+}
+
+@keyframes rotate-right {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 1turn;
+    }
+}
+
+.loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    border-color: #8bc34a;
+    border-width: 4px;
+    border-style: solid dotted;
+    border-radius: 50%;
+    animation: rotate-left 3s linear infinite;
+}
+
+@keyframes rotate-left {
+    from {
+        transform: translate(-50%, -50%) rotate(0)
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(-2turn)
+    }
+}
