@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.page {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+}
+
+.page::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) skew(0deg, 10deg);
+    border-radius: 50%;
+    width: 300%;
+    height: 100%;
+    background: #262838;
+    z-index: -1;
+    animation: wyving 8s ease-in-out alternate infinite;
+}
+
+@keyframes wyving {
+    from {
+        transform: translateX(-50%) skew(-10deg, -15deg);
+    }
+
+    to {
+        transform: translateX(-50%) skew(50deg, 0deg);
+    }
+}
+
+.card {
+    width: 230px;
+    padding: 20px;
+    box-shadow: 2px 3px 6px 0px rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.081);
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-family: system-ui;
+    -webkit-text-stroke: 1px black;
+    border-radius: 10px;
+    /* transition: 2s; */
+    background: #2628385b;
+}
+
+.card:hover {
+    box-shadow: 2px 3px 6px 0px black inset,
+        -2px -3px 6px 0px black inset;
+
+}
+
+.card .img {
+    width: 100%;
+    height: 300px;
+    background: #626262;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px 0px black;
+}
+
+.card p {
+    letter-spacing: 1px;
+}
+
+.card span {}
