@@ -1,0 +1,40 @@
+body {
+    height: 100vh;
+    background: #262838;
+    display: grid;
+    place-items: center;
+}
+
+.loading {
+    font-size: 80px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+}
+
+.loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 65px;
+    height: 90%;
+    background: white;
+    z-index: -1;
+    animation: move 3s linear infinite alternate;
+
+}
+
+@keyframes move {
+    from{
+        left: 0;
+    }
+    to{
+        left: calc(100% - 65px);
+    }
+}
+
+.loading span {
+    mix-blend-mode: difference;
+    color: white;
+}

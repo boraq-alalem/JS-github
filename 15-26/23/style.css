@@ -1,0 +1,51 @@
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: #262838;
+}
+
+div {
+    width: 60px;
+    height: 50px;
+    display: grid;
+    position: relative;
+    cursor: pointer;
+}
+
+div span {
+    height: 4px;
+    background: white;
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 100%;
+    transition: 0.5s;
+}
+
+div span:first-child{
+    top: 0;
+}
+
+div span:nth-child(2){
+    top: 23px;
+}
+
+div span:last-child{
+    top: 46px;
+}
+
+div:hover span:first-child{
+    top: 23px;
+    rotate: 45deg;
+}
+
+div:hover span:nth-child(2){
+    top: 23px;
+    opacity: 0;
+}
+
+div:hover span:last-child{
+    top: 23px;
+    rotate: -45deg;
+}

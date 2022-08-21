@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #262838;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+form{
+    color: white;
+}
+form div{
+    width: 400px;
+    position: relative;
+}
+form div .input{
+    background: rgba(238, 238, 238, 0.026);
+    width: 100%;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-size: 23px;
+    font-family: cursive;
+    border-bottom: solid 4px white;
+    border-radius: 5px 5px 0 0;
+}
+form div .input:focus{
+    outline: none;
+}
+form div .line{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 4px;
+    width: 0%;
+    background: yellow;
+    transition: 0.5s;
+    border-right: 10px solid black;
+
+}
+form span{
+    width: 400px;
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+    font-size: 20px;
+}

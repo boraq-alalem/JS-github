@@ -1,0 +1,20 @@
+.page{
+    height: 50%;
+    width: 30%;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%) skew(40deg,10deg);
+    border-radius: 50%;
+    animation: wyve 3s alternate infinite ease-in-out;
+    overflow: hidden;
+    box-shadow:  0 0 8px inset;
+}
+@keyframes wyve {
+    from{
+        transform: translate(-50%,-50%) skew(40deg,10deg);
+    }
+    to{
+        transform: translate(-50%,-50%) skew(-40deg,-10deg);
+    }
+}

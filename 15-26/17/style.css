@@ -1,0 +1,16 @@
+body {
+    height: 2000px;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #7d7d7d4f;
+    box-shadow: 2px 3px 8px #333 inset;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.597);
+}

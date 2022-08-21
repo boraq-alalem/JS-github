@@ -1,0 +1,73 @@
+*{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.open {
+    width: 40px;
+    height: 30px;
+    background: black;
+    display: grid;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+    margin: 5px;
+}
+
+.open:hover{
+    background: #333;
+}
+
+.open span {
+    background: white;
+    height: 4px;
+}
+.toggler{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    background: #262838;
+    color: white;
+    width: 350px;
+    left: -350px;
+    transition: 0.5s;
+}
+
+.toggler.show{
+    left: 0;
+}
+
+.toggler .close{
+    padding: 10px;
+    margin-left: 35px; 
+    height: 30px;
+    line-height: 30px; 
+    color: white;
+    font-size: 40px;
+    border-left: 2px solid;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.toggler .close:hover{
+    color: white;
+    border-color: #777;
+    background: rgba(0, 0, 0, 0.536);
+}
+
+.toggler ul{
+    position: absolute;
+    top: 150px;
+    font-size: 30px;
+    width: 100%;
+    display: grid;
+    gap: 15px;
+}
+.toggler ul li{
+    padding: 10px;
+    padding-left: 30px;
+    text-transform: uppercase;
+}
+.toggler ul li:hover{
+    background: #7d7d7d;
+}
